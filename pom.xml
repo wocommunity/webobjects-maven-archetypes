@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.wocommunity</groupId>
+	<artifactId>webobjects-maven-archetypes</artifactId>
+	<version>3.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>WebObjects Maven Archetypes Parent POM</name>
+	<description>Parent POM for all WebObjects Archetypes.</description>
+
+	<modules>
+		<module>erxapplication-archetype</module>
+		<module>erxapplication-d2w-archetype</module>
+		<module>erxapplication-servlet-archetype</module>
+		<module>partial-woapplication-servlet-archetype</module>
+		<module>woapplication-archetype</module>
+		<!-- This archetype is not ready yet -->
+		<!-- <module>woapplication-d2jc-webstart-archetype</module> -->
+		<module>woapplication-servlet-archetype</module>
+		<module>woframework-archetype</module>
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources/</directory>
+				<excludes>
+					<exclude>**/catalog/*</exclude>
+				</excludes>
+				<filtering>false</filtering>
+			</resource>
+			<resource>
+				<directory>${basedir}/src/main/resources/catalog</directory>
+				<targetPath>../catalog</targetPath>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<inherited>false</inherited>
+				<executions>
+					<execution>
+						<id>process-resources</id>
+						<phase>package</phase>
+						<goals>
+							<goal>resources</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.2</version>
+				<inherited>false</inherited>
+				<executions>
+					<execution>
+						<id>attach-artifacts</id>
+						<phase>package</phase>
+						<goals>
+							<goal>attach-artifact</goal>
+						</goals>
+						<configuration>
+							<artifacts>
+								<artifact>
+									<file>${project.build.directory}/catalog/archetype-catalog.xml</file>
+									<type>xml</type>
+									<classifier>catalog</classifier>
+								</artifact>
+							</artifacts>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-archetype-plugin</artifactId>
+				<version>2.4</version>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.2.0</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>2.4</version>
+			</extension>
+		</extensions>
+	</build>
+</project>
