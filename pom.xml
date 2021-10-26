@@ -20,8 +20,18 @@
 		<module>woframework-archetype</module>
 	</modules>
 
+	<licenses>
+		<license>
+			<name>Apache 2</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.scm.id>github</project.scm.id>
 	</properties>
 
 	<build>
@@ -100,4 +110,24 @@
 			</extension>
 		</extensions>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>wocommunity.deployment</id>
+			<name>WOCommunity Maven2 Releases Repository</name>
+			<url>https://maven.wocommunity.org/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>wocommunity.deployment</id>
+			<name>WOCommunity Maven2 Snapshots Repository</name>
+			<url>https://maven.wocommunity.org/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<scm>
+		<connection>scm:git:https://github.com/wocommunity/wolifecycle-maven-plugin.git</connection>
+		<url>scm:git:https://github.com/wocommunity/wolifecycle-maven-plugin.git</url>
+		<developerConnection>scm:git:https://github.com/wocommunity/wolifecycle-maven-plugin.git</developerConnection>
+	  <tag>HEAD</tag>
+	</scm>
 </project>
