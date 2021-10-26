@@ -9,4 +9,5 @@
 	<artifactId>woapplication-d2jc-webstart-archetype</artifactId>
 	<packaging>maven-archetype</packaging>
 	<name>WebObjects DirectToJavaClient Application Archetype</name>
+	<description>WebObjects DirectToJavaClient Application Project Archetype.</description>
 </project>

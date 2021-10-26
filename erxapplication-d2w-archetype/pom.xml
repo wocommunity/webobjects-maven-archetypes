@@ -9,4 +9,5 @@
 	<artifactId>erxapplication-d2w-archetype</artifactId>
 	<packaging>maven-archetype</packaging>
 	<name>Wonder D2W Application Archetype</name>
+	<description>Wonder D2W Application Project Archetype.</description>
 </project>

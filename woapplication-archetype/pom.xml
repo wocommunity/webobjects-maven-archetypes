@@ -9,4 +9,5 @@
 	<artifactId>woapplication-archetype</artifactId>
 	<packaging>maven-archetype</packaging>
 	<name>WebObjects Application Archetype</name>
+	<description>WebObjects Application Project Archetype.</description>
 </project>

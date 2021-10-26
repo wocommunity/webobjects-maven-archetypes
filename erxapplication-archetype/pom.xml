@@ -9,4 +9,5 @@
 	<artifactId>erxapplication-archetype</artifactId>
 	<packaging>maven-archetype</packaging>
 	<name>Wonder Application Archetype</name>
+	<description>Wonder Application Project Archetype.</description>
 </project>

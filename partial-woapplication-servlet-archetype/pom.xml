@@ -9,4 +9,5 @@
 	<artifactId>partial-woapplication-servlet-archetype</artifactId>
 	<packaging>maven-archetype</packaging>
 	<name>Partial WebObjects Servlet Application Archetype</name>
+	<description>Partial WebObjects Servlet Application Project Archetype.</description>
 </project>
