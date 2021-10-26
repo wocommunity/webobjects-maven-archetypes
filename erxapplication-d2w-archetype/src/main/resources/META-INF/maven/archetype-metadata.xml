@@ -4,6 +4,9 @@
 		<requiredProperty key="WonderVersion">
 			<defaultValue>7.2</defaultValue>
 		</requiredProperty>
+		<requiredProperty key="JavaVersion">
+			<defaultValue>1.8</defaultValue>
+		</requiredProperty>
 	</requiredProperties>
 	<fileSets>
 		<fileSet filtered="true" packaged="true" encoding="UTF-8">
