@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>webobjects-maven-archetypes</artifactId>
 		<groupId>org.wocommunity</groupId>
-		<version>3.0-SNAPSHOT</version>
+		<version>3.0</version>
 	</parent>
 	<artifactId>woframework-archetype</artifactId>
 	<packaging>maven-archetype</packaging>
